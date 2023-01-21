@@ -1,0 +1,19 @@
+{
+    "currencies": [
+        {
+            "name": "Cidis",
+            "value": 20 
+        },
+        {
+            "name": "Nigeria",
+            "value": 50 
+        },
+        {
+            "name": "Dollar",
+            "value": 80 
+        }
+    ]
+}
+
+
+
