@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import { Navbar, Container, Nav, NavDropdown } from 'react-bootstrap';
+import { Navbar, Container, Nav } from 'react-bootstrap';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   Link
 } from "react-router-dom";
-import About from '../pages/About';
 import CurrencyConvert from '../pages/CurrencyConvert';
 import TermperatureConverter from '../pages/TermperatureConverter';
 
