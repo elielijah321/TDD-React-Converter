@@ -1,7 +1,7 @@
 export const convertCurrency = (amount: number, value: number) => {
-    return 0;
+    return amount * value;
 }
 
 export const convertToFahrenheit = (celcius: number) => {
-    return 0;
+    return (celcius * 1.8) + 32;
 }
