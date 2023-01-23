@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import { convertCurrency } from '../converterFunctions';
+import { convertCurrency } from '../functions/converterFunctions';
 import * as data from '../data/currencies.json';
 const currenciesString = JSON.stringify(data);
 const currencies = JSON.parse(currenciesString).currencies;
