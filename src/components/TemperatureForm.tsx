@@ -37,25 +37,26 @@ const TemperatureForm = () => {
 
   return (
     <>
-    <Form noValidate validated={validated} onSubmit={handleSubmit}>
-      <Row className="mb-3">
-        <Form.Group as={Col} md="12" controlId="validationCustom01">
-          <Form.Label>Celcius</Form.Label>
-          <Form.Control
-            required
-            type="number"
-            placeholder="Celcius"
-            name='celcius'
-          />
-        </Form.Group>
+      <h1 data-testid="result">{result}</h1>
 
-      </Row>
-      {/* Submit Buttoon */}
-      <Button type="submit">Submit form</Button>
-    </Form>
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        {/* Celcius*/}
+        <Row className="mb-3">
+          <Form.Group as={Col} md="12" controlId="celcius">
+            <Form.Label>Celcius</Form.Label>
+            <Form.Control
+              required
+              type="number"
+              placeholder="Celcius"
+              name='celcius'
+              data-testid="celcius"
+            />
+          </Form.Group>
+        </Row>
 
-    <h1>{result}</h1>
-
+        {/* Submit Buttoon */}
+        <Button type="submit" data-testid="submit-btn" >Submit form</Button>
+      </Form>
     </>
   );
 }

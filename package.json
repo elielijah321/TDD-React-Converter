@@ -11,6 +11,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "bootstrap": "^5.2.3",
+    "cypress": "^12.3.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -22,7 +23,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --watchAll=false & npm run cy:run",
+    "cy:run": "cypress run",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {

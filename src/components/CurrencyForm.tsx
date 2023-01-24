@@ -46,42 +46,42 @@ const CurrencyForm = () => {
 
   return (
     <>
-    <Form noValidate validated={validated} onSubmit={handleSubmit}>
-      <Row className="mb-3">
-        <Form.Group as={Col} md="12" controlId="validationCustom01">
-          <Form.Label>Amount</Form.Label>
-          <Form.Control
-            required
-            type="number"
-            placeholder="Amount"
-            name='amount'
-          />
-        </Form.Group>
+      <h1 data-testid="result">{result}</h1>
+
+      <Form noValidate validated={validated} onSubmit={handleSubmit}>
+        <Row className="mb-3">
+          <Form.Group as={Col} md="12" controlId="amount">
+            <Form.Label>Amount</Form.Label>
+            <Form.Control
+              data-testid="amount"
+              required
+              type="number"
+              placeholder="Amount"
+              name='amount'
+            />
+          </Form.Group>
 
 
-        <Form.Group as={Col} md="12" controlId="validationCustom03">
-          <Form.Label>Currency</Form.Label>
+          <Form.Group as={Col} md="12" controlId="currency">
+            <Form.Label>Currency</Form.Label>
 
-          <Form.Select name='currency' aria-label="Default select example" required>
-              <option value="">Select a currency</option>
-              {
-                currencies.map((currency: Currency) => 
-                {return (
-                  <option key={currency.name} value={currency.value}>
-                            {currency.name} - {currency.value}
-                  </option>
-                )})
-              }
-            </Form.Select>
-        </Form.Group>
+            <Form.Select name='currency' data-testid="currency" aria-label="Select a currency" required>
+                <option value="">Select a currency</option>
+                {
+                  currencies.map((currency: Currency) => 
+                  {return (
+                    <option key={currency.name} value={currency.value}>
+                              {currency.name} - {currency.value}
+                    </option>
+                  )})
+                }
+              </Form.Select>
+          </Form.Group>
 
-      </Row>
-      {/* Submit Buttoon */}
-      <Button type="submit">Submit form</Button>
-    </Form>
-
-    <h1>{result}</h1>
-
+        </Row>
+        {/* Submit Buttoon */}
+        <Button type="submit" data-testid='submit-btn'>Submit form</Button>
+      </Form>
     </>
   );
 }
